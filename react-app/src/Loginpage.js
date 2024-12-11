@@ -11,8 +11,17 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
     const navigate = useNavigate();
 
+    const handleLogin = () => {
+        // Perform login validation here (if needed)
+        navigate('/questionnaire'); // Navigate to the Music Questionnaire page
+    };
+
     const handleSignUpRedirect = () => {
-        navigate('/signup'); // Redirect to the sign-up page
+        navigate('/signup'); // Navigate to the Sign-Up page
+    };
+
+    const handleGuestRedirect = () => {
+        navigate('/questionnaire'); // Navigate as a guest
     };
 
     return (
@@ -28,7 +37,7 @@ const Login = () => {
                     />
                 </CCol>
             </CRow>
-                
+
             <CRow className="mb-3">
                 <CFormLabel htmlFor="inputPassword" className="col-sm-2 col-form-label">Password</CFormLabel>
                 <CCol sm={10}>
@@ -40,7 +49,7 @@ const Login = () => {
                 </CCol>
             </CRow>
 
-            <CButton color="primary" type="submit">
+            <CButton color="primary" onClick={handleLogin}>
                 Log In
             </CButton>
 
@@ -50,6 +59,12 @@ const Login = () => {
                     Sign Up
                 </CButton>
             </p>
+
+            <p style={{ marginTop: '20px' }}>Or</p>
+
+            <CButton color="secondary" onClick={handleGuestRedirect}>
+                Proceed as Guest
+            </CButton>
         </div>
     );
 };

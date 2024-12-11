@@ -1,8 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
-import Login from '/Users/brucey/COSC/COSC465-new-project /react-app/src/Loginpage.js';
-import SignUp from '/Users/brucey/COSC/COSC465-new-project /react-app/src/SignUppage.js';
+import Login from './Loginpage';
+import SignUp from './SignUppage';
+import MusicQuestionnaire from './Questionnaire';
+import Homepage from './homepage';
 
 const App = () => {
     return (
@@ -10,6 +12,8 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
+                <Route path="/questionnaire" element={<MusicQuestionnaire />} />
+                <Route path="/homepage" element={<Homepage />} />
             </Routes>
         </Router>
     );
