@@ -1,0 +1,154 @@
+/* General Page Styles */
+.homepage-container {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 16px;
+    max-width: 1200px;
+    background-color: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    background-color: #333;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.nav-link {
+    color: #fff;
+    margin: 0 8px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #555;
+    color: #ff0000;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 32px;
+    padding: 16px;
+    background-color: #d6d6d6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+.section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 150px;
+}
+
+.card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+.card-title, .card-artist, .card-genre {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.card-genre {
+    font-weight: bold;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.primary-button, .secondary-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border: none;
+}
+
+.primary-button {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.primary-button:hover {
+    background-color: #00b321;
+}
+
+.secondary-button {
+    background-color: #00b321;
+    color: #fff;
+}
+
+.secondary-button:hover {
+    background-color: #ff0000;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-container {
+        justify-content: center;
+    }
+
+    .card {
+        width: 120px;
+    }
+
+    .card-image {
+        height: 120px;
+    }
+
+    .section {
+        padding: 12px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+}

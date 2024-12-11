@@ -1,82 +1,146 @@
 import React from 'react';
-
 import {
     CNav,
     CNavItem,
     CNavLink,
 } from '@coreui/react';
+import '/Users/brucey/COSC/COSC465-new-project /react-app/src/homepage.css';
 
 const Homepage = () => {
     return (
-        <div style={{ fontFamily: 'Arial, sans-serif', color: '#fff', backgroundColor: '#121212', minHeight: '100vh' }}>
-            <div>
-                <CNav className="justify-content-center">
-                    <CNavItem>
-                        <CNavLink href="#" active>
-                        Active
-                        </CNavLink>
-                    </CNavItem>
-                    <CNavItem>
-                        <CNavLink href="#">Link</CNavLink>
-                    </CNavItem>
-                    <CNavItem>
-                        <CNavLink href="#">Link</CNavLink>
-                    </CNavItem>
-                    <CNavItem>
-                        <CNavLink href="#" disabled>
-                        Disabled
-                        </CNavLink>
-                    </CNavItem>
-                </CNav>
-            </div>
-            {/* Navbar */}
-            <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 20px', backgroundColor: '#1e1e1e' }}>
-                <h1 style={{ fontSize: '24px', color: '#1db954' }}>Music Connect</h1>
-                <div style={{ display: 'flex', gap: '15px' }}>
-                    <a href="#for-you" style={{ textDecoration: 'none', color: '#fff' }}>For You</a>
-                    <a href="#communities" style={{ textDecoration: 'none', color: '#fff' }}>Communities</a>
-                    <a href="#friends" style={{ textDecoration: 'none', color: '#fff' }}>Friends</a>
-                </div>
-            </nav>
+        <div className="homepage-container">
+            <CNav className="navbar">
+                <CNavItem>
+                    <CNavLink href="#popular" active className="nav-link">Popular</CNavLink>
+                </CNavItem>
+                <CNavItem>
+                    <CNavLink href="#communities" className="nav-link">Communities</CNavLink>
+                </CNavItem>
+                <CNavItem>
+                    <CNavLink href="#friends" className="nav-link">Friends</CNavLink>
+                </CNavItem>
+                <CNavItem>
+                    <CNavLink href="#genres" className="nav-link">New Sound</CNavLink>
+                </CNavItem>
+            </CNav>
 
-            {/* Main Content */}
-            <div style={{ padding: '20px' }}>
-                <section id="for-you" style={{ marginBottom: '40px' }}>
-                    <h2 style={{ color: '#1db954' }}>For You</h2>
-                    <p>Discover new music tailored to your taste.</p>
-                    {/* Add your recommendation logic here */}
-                    <div style={{ display: 'flex', gap: '20px', overflowX: 'scroll' }}>
-                        {/* Example song cards */}
-                        <div style={{ width: '200px', backgroundColor: '#282828', padding: '10px', borderRadius: '8px' }}>
-                            <img src="https://via.placeholder.com/150" alt="Album Art" style={{ width: '100%', borderRadius: '4px' }} />
-                            <p style={{ marginTop: '10px', fontWeight: 'bold' }}>Song Title</p>
-                            <p>Artist Name</p>
+            <div className="content">
+                <section id="popular" className="section">
+                    <h2><u>Popular</u></h2>
+                    <p>Discover some of the hottest songs right now.</p>
+                    <div className="card-container">
+                        <div className="card">
+                            <img src="img/AllIWANTFORCHRIST.465.jpeg" alt="Album Art" className="card-image" />
+                            <p className="card-title"><b>All I Want For Christmas Is You</b></p>
+                            <p className="card-artist"><i>Mariah Carey</i></p>
                         </div>
-                        {/* Repeat similar song cards */}
+                        <div className="card">
+                            <img src="img/Single_Brenda_Lee-Rockin'_Around_the_Christmas_Tree_cover.465.jpg" alt="Album Art" className="card-image" />
+                            <p className="card-title"><b>Rockin' Around The Christmas Tree</b></p>
+                            <p className="card-artist"><i>Brenda Lee</i></p>
+                        </div>
+                        <div className="card">
+                            <img src="img/LastChristmas.465.jpeg" alt="Album Art" className="card-image" />
+                            <p className="card-title"><b>Last Christmas</b></p>
+                            <p className="card-artist"><i>Wham!</i></p>
+                        </div>
+                        <div className="card">
+                            <img src="img/Kendrickgnx.465.webp" alt="Album Art" className="card-image" />
+                            <p className="card-title"><b>TV Off</b></p>
+                            <p className="card-artist"><i>Kendrick Lamar Featuring Lefty Gunplay</i></p>
+                        </div>
+                        <div className="card">
+                            <img src="img/jinglebellrock.465.jpeg" alt="Album Art" className="card-image" />
+                            <p className="card-title"><b>Jingle Bell Rock</b></p>
+                            <p className="card-artist"><i>obby Helms</i>B</p>
+                        </div>
+                        <div className="card">
+                            <img src="img/Kendrickgnx.465.webp" alt="Album Art" className="card-image" />
+                            <p className="card-title"><b>Luther</b></p>
+                            <p className="card-artist"><i>Kendrick Lamar & SZA</i></p>
+                        </div>
                     </div>
                 </section>
 
-                <section id="communities" style={{ marginBottom: '40px' }}>
-                    <h2 style={{ color: '#1db954' }}>Communities</h2>
+                <section id="communities" className="section">
+                    <h2><u>Communities</u></h2>
                     <p>Join or create communities to share music with friends.</p>
-                    {/* Add community logic or links */}
-                    <div style={{ display: 'flex', gap: '15px' }}>
-                        <button style={{ padding: '10px 20px', backgroundColor: '#1db954', color: '#fff', border: 'none', borderRadius: '4px' }}>Create a Community</button>
-                        <button style={{ padding: '10px 20px', backgroundColor: '#1e1e1e', color: '#fff', border: '1px solid #1db954', borderRadius: '4px' }}>Browse Communities</button>
+                    <div className="button-group">
+                        <button className="primary-button">Create a Community</button>
+                        <button className="secondary-button">Browse Communities</button>
                     </div>
                 </section>
 
-                <section id="friends" style={{ marginBottom: '40px' }}>
-                    <h2 style={{ color: '#1db954' }}>Friends</h2>
+                <section id="friends" className="section">
+                    <h2><u>Friends</u></h2>
                     <p>See what your friends are listening to.</p>
-                    {/* Add friends logic */}
-                    <div style={{ display: 'flex', gap: '20px', overflowX: 'scroll' }}>
-                        {/* Example friend activity */}
-                        <div style={{ width: '200px', backgroundColor: '#282828', padding: '10px', borderRadius: '8px' }}>
-                            <p style={{ fontWeight: 'bold' }}>John Doe</p>
-                            <p>Listening to: Song Title</p>
+                    <div className="card-container">
+                        <div className="card">
+                            <p className="card-title"><u>Bruce Metoyer</u></p>
+                            <p>Listening to: <b>Change</b></p>
+                            <p>Artist: <i>J. Cole</i></p>
                         </div>
-                        {/* Repeat similar friend activity cards */}
+                        <div className="card">
+                            <p className="card-title"><u>Noble Grant</u></p>
+                            <p>Listening to: <b>ARE WE STILL FRIENDS</b></p>
+                            <p>Artist: <i>Tyler, The Creator</i></p>
+                        </div>
+                        <div className="card">
+                            <p className="card-title"><u>Matthew Akinmolayan</u></p>
+                            <p>Listening to: <b>When I Was Your Man</b></p>
+                            <p>Artist: <i>Bruno Mars</i></p>
+                        </div>
+                        <div className="card">
+                            <p className="card-title"><u>Bart Minty</u></p>
+                            <p>Listening to: <b>I KNOW ?</b></p>
+                            <p>Artist: <i>Travis Scott</i></p>
+                        </div>
+                        <div className="card">
+                            <p className="card-title"><u>Christian Cadet</u></p>
+                            <p>Listening to: <b>Like Him</b></p>
+                            <p>Artist: <i>Tyler, The Creator, Lola Young</i></p>
+                        </div>
+                        <div className="card">
+                            <p className="card-title"><u>Jayden McBean</u></p>
+                            <p>Listening to: <b>D.T.B</b></p>
+                            <p>Artist: <i>A Boogie Wit da Hoodie</i></p>
+                        </div>
+                        <div className="card">
+                            <p className="card-title"><u>Mathieu Racine</u></p>
+                            <p>Listening to: <b>I Hate U</b></p>
+                            <p>Artist: <i>SZA</i></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="genres" className="section">
+                    <h2><u>New Sound</u></h2>
+                    <p>Discover other genres.</p>
+                    <div className="card-container">
+                        <div className="card">
+                            <img src="img/rockmusik-1024x1024.465.jpg" alt="Album Art" className="card-image" />
+                            <p className="card-genre">Rock</p>
+                        </div>
+                        <div className="card">
+                            <img src="img/pop-musik.465.jpg" alt="Album Art" className="card-image" />
+                            <p className="card-genre">Pop</p>
+                        </div>
+                        <div className="card">
+                            <img src="img/hiphop.465.jpg" alt="Album Art" className="card-image" />
+                            <p className="card-genre">Hip-hop</p>
+                        </div>
+                        <div className="card">
+                            <img src="img/abstract-7476913_1280.465jazz.webp" alt="Album Art" className="card-image" />
+                            <p className="card-genre">Jazz</p>
+                        </div>
+                        <div className="card">
+                            <img src="img/CountryMusic.465.png" alt="Album Art" className="card-image" />
+                            <p className="card-genre">Country</p>
+                        </div>
+                        <div className="card">
+                            <img src="img/Classical-Music-800x450.465.jpg" alt="Album Art" className="card-image" />
+                            <p className="card-genre">Classical</p>
+                        </div>
                     </div>
                 </section>
             </div>
