@@ -52,7 +52,7 @@ const Homepage = () => {
                         <div className="card">
                             <img src="img/jinglebellrock.465.jpeg" alt="Album Art" className="card-image" />
                             <p className="card-title"><b>Jingle Bell Rock</b></p>
-                            <p className="card-artist"><i>obby Helms</i>B</p>
+                            <p className="card-artist"><i>Bobby Helms</i></p>
                         </div>
                         <div className="card">
                             <img src="img/Kendrickgnx.465.webp" alt="Album Art" className="card-image" />
