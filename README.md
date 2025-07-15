@@ -58,3 +58,10 @@ authentication.
 Modularity: Each component (recommendation engine, playlist management, social features)
 should be modular to facilitate updates.
 Documentation: Complete documentation for future developers.
+
+<img width="1913" height="991" alt="Screenshot 2025-07-14 at 10 31 02 PM" src="https://github.com/user-attachments/assets/e1310b0b-170a-4fd0-ae3e-25676fdbb1ef" />
+<img width="1913" height="991" alt="Screenshot 2025-07-14 at 10 31 13 PM" src="https://github.com/user-attachments/assets/6ae1a55e-ae17-4f19-92f4-f5dae42d4396" />
+<img width="1913" height="991" alt="Screenshot 2025-07-14 at 10 31 26 PM" src="https://github.com/user-attachments/assets/25c50aaf-4044-4e19-a76f-3d94987f9ffe" />
+
+
+
